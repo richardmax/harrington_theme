@@ -2,8 +2,13 @@
 jQuery(document).ready(function($){
 	
 	
-	//alert('here >>>>>>>>>>>>>>');
 	
+	/* ACTIVITIES ------------------------------- */
+	$(".btn").click(function() { 
+		var val = $(this).val();
+		alert($(this).val());
+	}); 
+
 	/* THIS IS FOR FILTERING ---------------------------------------------------------------------------------------------------------- */
 
 	var nothingSelectedText = 'No options selected';
@@ -11,51 +16,51 @@ jQuery(document).ready(function($){
 	var showOnly = [];
 	var classarray = [];
 
-    $('.filter-dropdown').multiselect({
-		
-		//buttonClass: 'btn-primary btn-lg span3',
-		//includeSelectAllOption: true,
-		selectAllValue: 'multiselect-all',
-		//includeSelectAllDivider: true,
-		includeSelectAllIfMoreThan: 4,
-		selectAllText: 'All Options',
-		//enableFiltering: true,
-		//enableCaseInsensitiveFiltering: true,
-		//filterPlaceholder: 'Type Search Term here',
-		maxHeight: 500,
-		buttonWidth: '188px',
-		nonSelectedText: nothingSelectedText,
-		numberDisplayed: 3,
-
-      	onChange: function(element, checked) {
-      		
-		//	alert(element.val());
+		$('.filter-dropdown').multiselect({
 			
-			// Find and remove item from an array
-			var i = viewArray.indexOf(element.val());
-			if(!checked) {
-				viewArray.splice(i, 1);
-			}else{
-				viewArray.push(element.val());
-			}
-
-			showOnly = viewArray.join();
-			//alert("showonly: " + showOnly);
-			
-			$('.filter-class-view').each(function(){
-				// only supports 20 simultaneoes selections currently!
-				if (!$(this).hasClass(viewArray[0]) && 
-					!$(this).hasClass(viewArray[1]) && 
-					!$(this).hasClass(viewArray[2]) && 
-					!$(this).hasClass(viewArray[3]) && 
-					!$(this).hasClass(viewArray[4]) &&
-					!$(this).hasClass(viewArray[5]) &&
-					!$(this).hasClass(viewArray[6]) &&
-					!$(this).hasClass(viewArray[7]) &&
-					!$(this).hasClass(viewArray[8]) &&
-					!$(this).hasClass(viewArray[9]) &&
-					!$(this).hasClass(viewArray[10]) &&
-					!$(this).hasClass(viewArray[11]) &&
+			//buttonClass: 'btn-primary btn-lg span3',
+			//includeSelectAllOption: true,
+			selectAllValue: 'multiselect-all',
+			//includeSelectAllDivider: true,
+			includeSelectAllIfMoreThan: 4,
+			selectAllText: 'All Options',
+			//enableFiltering: true,
+			//enableCaseInsensitiveFiltering: true,
+			//filterPlaceholder: 'Type Search Term here',
+			maxHeight: 500,
+			buttonWidth: '188px',
+			nonSelectedText: nothingSelectedText,
+			numberDisplayed: 3,
+	
+			onChange: function(element, checked) {
+				
+			//alert(element.val());
+				
+				// Find and remove item from an array
+				var i = viewArray.indexOf(element.val());
+				if(!checked) {
+					viewArray.splice(i, 1);
+				}else{
+					viewArray.push(element.val());
+				}
+	
+				showOnly = viewArray.join();
+				alert("showonly: " + showOnly);
+				
+				$('.filter-class-view').each(function(){
+					// only supports 20 simultaneoes selections currently!
+					if (!$(this).hasClass(viewArray[0]) && 
+						!$(this).hasClass(viewArray[1]) && 
+						!$(this).hasClass(viewArray[2]) && 
+						!$(this).hasClass(viewArray[3]) && 
+						!$(this).hasClass(viewArray[4]) &&
+						!$(this).hasClass(viewArray[5]) &&
+						!$(this).hasClass(viewArray[6]) &&
+						!$(this).hasClass(viewArray[7]) &&
+						!$(this).hasClass(viewArray[8]) &&
+						!$(this).hasClass(viewArray[9]) &&
+						!$(this).hasClass(viewArray[10]) &&
+						!$(this).hasClass(viewArray[11]) &&
 					!$(this).hasClass(viewArray[12]) &&
 					!$(this).hasClass(viewArray[13]) &&
 					!$(this).hasClass(viewArray[14]) &&

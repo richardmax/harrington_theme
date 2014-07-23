@@ -884,10 +884,11 @@ div.widget {margin-bottom: 10px;}
 
 
 .acf-map {
-	width: 440px;
+	width: 470px;
 	height: 230px;
 	border: #ccc solid 1px;
 	margin: 0;
+	margin-bottom:20px;
 }
 
 .tab-content > .active,
@@ -939,22 +940,18 @@ text-decoration:none !important;
 
 #menu-side-menu > li > a{
 text-transform: uppercase;
-
 width: 145px;
-
-
 color: #4e505f;
-line-height:20px;
-display:block;
+line-height: 20px;
+display: block;
 font-size: 11px;
 height: 20px;
-margin:0px;
+margin: 0px;
 padding: 10px 0 10px 10px;
-
 line-height: 20px;
-font-size: 11px;
+font-size: 10px;
 height: 40px;
-padding: 10px;
+padding-left: 10px;
 margin: 0;
 
 }
@@ -1004,19 +1001,19 @@ ul{margin:10px;}
 .home .hentry-parent img{margin-left:0px; width:72px; margin-top:0px;}
 .home .hentry-child img{margin-left:0px; width:150px;}
 
-.activities{width:100% !important; height:150px !important; background:#CCC; overflow:hidden;}
+.activities{width:100% !important; height:105px !important; background:#F7F5F5; overflow:hidden;}
 
-.activities img{width:auto; vertical-align:top;}
+.activities img{width:105px; vertical-align:top;}
 
-.activities .content-holder{display:inline-block; width:300px}
+.activities .content-holder{display:inline-block; }
 
 #activity-dropdown{width:100%}
-
+p.address{margin-bottom:10px;}
 .page-newsletters li{ list-style:none;}
 
 .single-properties{margin-bottom:10px}
 
-.span10 .thumbnails > li{margin:0px}
+.span10 .thumbnails > li{margin:0px; margin-bottom: 5px; rgb(223, 234, 243) solid 1px}
 
 .single-properties figcaption{}
 
@@ -1081,4 +1078,29 @@ color: #eeeae7 !important;}
 
 .carousel-control{top:50%; line-height: 25px;}
 
-.tab-content {height:500px;}
+.single-properties .tab-content {height:500px;}
+
+
+ul.timeout-nav, .timeout-nav ul{
+	margin:0;
+}
+
+.timeout-nav li{
+	font-weight:bold;
+line-height: 20px;
+display: block;
+padding-right: 30px;
+float: left;
+}
+
+.timeout-nav li li{
+	font-weight: normal;
+float: none;
+}
+
+
+.page_item .nav>li>a{padding:0}
+
+.contentarea h2{padding-top:5px; margin-bottom:5px;}
+
+.thumbnail{margin-bottom:0;}

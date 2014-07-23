@@ -235,7 +235,7 @@
                     <?php 
                         $location = get_field('map');
 						
-						echo "yeah ha:" . $location['lat'];
+						//echo "yeah ha:" . $location['lat'];
 						
                         if( !empty($location) ): ?>
                             <div class="acf-map">

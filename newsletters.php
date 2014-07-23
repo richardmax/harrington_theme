@@ -9,8 +9,17 @@
     
        
   <nav class="span4">
-		 <?php get_template_part('menu-filter-newsletters') ?>
-     
+<?php $args = array(
+	
+	'post_type'    => 'newsletters',
+	'post_status'  => 'publish',
+	'show_date'    => '1',
+	
+	'title_li'     => __('Pages'), 
+	'walker'       => ''
+); ?>
+asdda
+<?php wp_list_pages( $args ); ?> 
 </nav>
     
     
