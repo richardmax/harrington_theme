@@ -1111,4 +1111,6 @@ float: none;
 
 li.type-properties {background-color: #F8F8F8; margin-bottom:15px !important;}
 
-.type-properties .thumbnail figcaption{color:#000;}
+.type-properties .thumbnail figcaption,
+.type-properties li:hover .thumbnail figcaption{color:#000;}
+
