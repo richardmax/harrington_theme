@@ -329,7 +329,7 @@ header .nav-pills > li > a {text-align: center;}
 /* logo */
 li.logo a {
 	width: 144px;    
-	background: url(images/header-logo.png) no-repeat scroll center center transparent;
+	background: url( <?php echo get_template_directory_uri()."images/header-logo.png"; ?>) no-repeat scroll center center transparent;
 }
 li.logo span {	
 	text-align: center;
@@ -893,7 +893,7 @@ div.widget {margin-bottom: 10px;}
 
 .tab-content > .active,
 .pill-content > .active {
-  max-height:230px;
+  /*max-height:230px;*/
 }
 
 .propertyNav .thumbnails{margin-right:-20px}
@@ -1052,7 +1052,9 @@ color: #eeeae7 !important;}
 	min-height: 80px !important;
 }
 
-.property-filter-main .nav>li>a{height:72px !important;}
+.property-filter-main .nav>li>a{height: 72px !important;
+margin-bottom: 15px;
+margin-top: 15px;}
 
 
 
@@ -1104,3 +1106,9 @@ float: none;
 .contentarea h2{padding-top:5px; margin-bottom:5px;}
 
 .thumbnail{margin-bottom:0;}
+
+.type-properties .thumbnail figcaption{background-color: rgba(219, 219, 219, 0.5);}
+
+li.type-properties {background-color: #F8F8F8; margin-bottom:15px !important;}
+
+.type-properties .thumbnail figcaption{color:#000;}
