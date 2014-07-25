@@ -6,52 +6,19 @@
 ?>
 <?php get_template_part('nav-secondary') ?>
 
-<nav class="span10">
-  <h2>Time Out at the Harrington</h2>
-  <hr>
-  <ul class="timeout-nav">
-    <?php $args = array(
-	'orderby'            => 'date',
-	'order'              => 'ASC',
-	'style'              => 'list',
-	'show_count'         => 0,
-	'hide_empty'         => 1,
-	'use_desc_for_title' => 1,
-	'child_of'           => 0,
-	'hierarchical'       => 1,
-	'title_li'           => __( '' ),
-	'show_option_none'   => __( 'No categories' ),
-	'number'             => null,
-	'echo'               => 1,
-	'depth'              => 0,
-	'current_category'   => 0,
-	'pad_counts'         => 0,
-	'taxonomy'           => 'time-out'
-); ?>
-    <?php wp_list_categories( $args ); ?>
-  </ul>
-</nav>
-<article class="span10 contentarea">
+<nav class="span4">
+		<h1 class="title">Time out</h1>
+			
+											<?php get_template_part('menu-filter-activities') ?>
+		</nav>
+<article class="span6 contentarea">
   <hr>
   <ul class="thumbnails">
-    <?php	
-			$args = array(
-				/*'meta_key' => 'event_start_date',
-			   'orderby' => 'meta_value_num',*/
-			   'order' => 'ASC',
-				'post_type'    => 'activities',
-				'time-out' => 'entertainment',
-				'post_status'  => 'publish',
-			); 
-                
-			// the query
-			$the_query = new WP_Query( $args );
-	 		
-		if ( $the_query->have_posts() ) : ?>
+    
     
     <!-- pagination here --> 
     <!-- the loop -->
-    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+    
     <?php 
 				$classes2use = "filter-class-view sub-filter-class-view "; 
 				$classes2use .= get_field('activity_type');
@@ -79,17 +46,13 @@
         
       </div>
     </li>
-    <?php endwhile; ?>
+    
     
     <!-- end of the loop --> 
     <!-- pagination here -->
     
     <?php wp_reset_postdata(); ?>
-    <?php else:  ?>
-    <p>
-      <?php _e( 'Sorry, no posts matched your criteria.' ); ?>
-    </p>
-    <?php endif; ?>
+    
   </ul>
   <?php bootstrapwp_content_nav('nav-below');?>
 </article>

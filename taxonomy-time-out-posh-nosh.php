@@ -20,7 +20,7 @@
 			   'orderby' => 'meta_value_num',*/
 			   'order' => 'ASC',
 				'post_type'    => 'activities',
-				'time-out' => 'gallery',
+				'time-out' => 'posh-nosh',
 				'post_status'  => 'publish',
 			); 
                 

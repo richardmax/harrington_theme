@@ -20,7 +20,7 @@
 			   'orderby' => 'meta_value_num',*/
 			   'order' => 'ASC',
 				'post_type'    => 'activities',
-				'time-out' => 'gallery',
+				'time-out' => 'steakhouse',
 				'post_status'  => 'publish',
 			); 
                 

@@ -5,14 +5,12 @@
 	 get_header();
 ?>
 <?php get_template_part('nav-secondary') ?>
-
 <nav class="span4">
 		<h1 class="title">Time out</h1>
 			
 											<?php get_template_part('menu-filter-activities') ?>
 		</nav>
-<article class="span6 contentarea">
-  <hr>
+<article class="span6 contentarea">  <hr>
   <ul class="thumbnails">
     <?php	
 			$args = array(
@@ -20,7 +18,7 @@
 			   'orderby' => 'meta_value_num',*/
 			   'order' => 'ASC',
 				'post_type'    => 'activities',
-				'time-out' => 'gallery',
+				'time-out' => 'cafe',
 				'post_status'  => 'publish',
 			); 
                 
