@@ -13,22 +13,47 @@
 		</nav>
 <article class="span6 contentarea">
   <hr>
- <p>Select a time out event above.</p>
+  <ul class="thumbnails">
+    
+    
+    <!-- pagination here --> 
+    <!-- the loop -->
+    
+    <?php 
+				$classes2use = "filter-class-view sub-filter-class-view "; 
+				$classes2use .= get_field('activity_type');
+				$classes2use .= " ";
+				$classes2use .= get_field('resturant_type');
+				$classes2use .= " ";
+				$classes2use .= $m = substr(get_field('event_start_date'), 4, 2);
+            ?>
+    <li <?php post_class($classes2use); ?>>
+      <?php the_post_thumbnail('thumbnail'); ?>
+      <div class='content-holder'>
+        <h2>
+          
+        </h2>
+        <?php
+                    $start_date = DateTime::createFromFormat('Ymd', get_field('event_start_date'));
+                    $end_date = DateTime::createFromFormat('Ymd', get_field('event_end_date'));
+                    
+                    if($start_date){ ?>
+        <h3 class="dates"><?php echo $start_date->format('d-m-Y'); ?> to <?php echo $end_date->format('d-m-Y'); ?></h3>
+        <?php } ?>
+        <?php $location = get_field('location'); ?>
+        <p class="address"><strong><?php echo $location['address']; ?></strong></p>
+        <?php the_content(); ?>
+        
+      </div>
+    </li>
+    
+    
+    <!-- end of the loop --> 
+    <!-- pagination here -->
+    
+    <?php wp_reset_postdata(); ?>
+    
+  </ul>
   <?php bootstrapwp_content_nav('nav-below');?>
 </article>
 <?php get_footer(); ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
