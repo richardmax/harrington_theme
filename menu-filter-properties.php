@@ -14,13 +14,13 @@
     <div class='filter-dropdown-holder span3'>
         <small>Stay Length</small> 
         <select id="staylength" class="filter-dropdown span3" multiple="multiple">
-            <option value="category-long-stay,category-short-stay" selected><a><i class="icon-linkedin icon-border"></i>All lengths of stay</a></option>
+            <!-- option value="category-long-stay,category-short-stay" selected><a><i class="icon-linkedin icon-border"></i>All lengths of stay</a></option -->
             <option value="category-short-stay"><a><i class="icon-linkedin icon-border"></i>Short Stay</a></option>
             <option value="category-long-stay"><a><i class="icon-cloud icon-border"></i>Long Stay (28 days+)</a></option>
         </select>
     </div>
     
-    <div class='filter-dropdown-holder span3'>
+    <!-- div class='filter-dropdown-holder span3'>
         <small>Location</small> 
         <select id="location" class="filter-dropdown span3" multiple="multiple">
             <option value="category-london,category-newyork,category-singapore" selected><a><i class="icon-linkedin icon-border"></i>All Locations</a></option>
@@ -28,10 +28,10 @@
             <option value="category-newyork"><a><i class="icon-linkedin icon-border"></i>New York</a></option>
             <option value="category-singapore"><a><i class="icon-cloud icon-border"></i>Singapore</a></option>
         </select>
-    </div>
+    </div -->
     
-    <div class='filter-dropdown-holder span3'>
-        <small>Keywords</small> 
+    <div class='keywords-dropdown-holder filter-dropdown-holder span5'>
+        <small>Keywords (Select to view, terms are exclusive)</small> 
         <select id="keywords" class="filter-dropdown span3" multiple="multiple">
             <option value="tag-terrace"><a><i class="icon-linkedin icon-border"></i>Terrace</a></option>
             <option value="tag-balcony"><a><i class="icon-linkedin icon-border"></i>Balcony</a></option>

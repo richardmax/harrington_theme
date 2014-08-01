@@ -679,7 +679,7 @@ class Thumbnail_walker extends Walker_page {
 		if ( '' != get_the_post_thumbnail($page->ID) ) {
 			$output .= '<a class="thumbnail" href="' . get_permalink($page->ID) . '">' . $link_before . apply_filters( 'the_title', '' ) . $link_after . get_the_post_thumbnail($page->ID, array(72,72));
 		}else{
-			$output .= "<a class='thumbnail' href='http://mus1c.co.uk/properties/3-harrington-gardens/'><img width='72' height='72' src='";
+			$output .= "<a class='thumbnail' href='" . get_permalink($page->ID) . "'><img width='72' height='72' src='";
 			$output .= get_template_directory_uri();
 			$output .= "/images/no-image.png' class='attachment-72x72 wp-post-image' alt='No Image Available'>";
 		}

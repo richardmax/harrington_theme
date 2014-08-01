@@ -45,7 +45,7 @@ jQuery(document).ready(function($){
 				}
 	
 				showOnly = viewArray.join();
-				alert("showonly: " + showOnly);
+				///alert("shossswonly: " + showOnly);
 				
 				$('.filter-class-view').each(function(){
 					// only supports 20 simultaneoes selections currently!
@@ -61,20 +61,30 @@ jQuery(document).ready(function($){
 						!$(this).hasClass(viewArray[9]) &&
 						!$(this).hasClass(viewArray[10]) &&
 						!$(this).hasClass(viewArray[11]) &&
-					!$(this).hasClass(viewArray[12]) &&
-					!$(this).hasClass(viewArray[13]) &&
-					!$(this).hasClass(viewArray[14]) &&
-					!$(this).hasClass(viewArray[15]) &&
-					!$(this).hasClass(viewArray[16]) &&
-					!$(this).hasClass(viewArray[17]) &&
-					!$(this).hasClass(viewArray[18]) &&
-					!$(this).hasClass(viewArray[19]) &&
-					!$(this).hasClass(viewArray[20])) {
+						!$(this).hasClass(viewArray[12]) &&
+						!$(this).hasClass(viewArray[13]) &&
+						!$(this).hasClass(viewArray[14]) &&
+						!$(this).hasClass(viewArray[15]) &&
+						!$(this).hasClass(viewArray[16]) &&
+						!$(this).hasClass(viewArray[17]) &&
+						!$(this).hasClass(viewArray[18]) &&
+						!$(this).hasClass(viewArray[19]) &&
+						!$(this).hasClass(viewArray[20])) {
 						$(this).hide().addClass('hidden');
 					} else {
 						$(this).show().removeClass('hidden');
 					}
 				});
+				
+				
+				if(showOnly == ''){
+			
+					$('.filter-class-view').each(function(){
+						$(this).show().removeClass('hidden');
+					});
+
+					
+				}
 			
       	}
     });
@@ -83,6 +93,8 @@ jQuery(document).ready(function($){
 
 		classarray = $(this).val();
 		
+		
+		//alert("here!"); 
 		//alert("classarray: " + classarray); 
 
 		if(classarray == undefined){

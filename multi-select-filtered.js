@@ -26,7 +26,7 @@ jQuery(document).ready(function($){
 
       	onChange: function(element, checked) {
       		
-			alert(element.val());
+			alert('>>>>{' . element.val());
 			
 			// Find and remove item from an array
 			var i = viewArray.indexOf(element.val());
